@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,45 +676,90 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Wikia_links" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
-            <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
-                    </connections>
-                </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="250"/>
-        </scene>
-        <!--View Controller-->
+        <!--Upload View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadViewController" id="XfG-lQ-9wD" customClass="UploadViewController" customModule="Wikia_links" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="128"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-MG-HDD">
+                                <rect key="frame" x="56" y="49" width="152" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="xfa-wB-Gph"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Wikia name" drawsBackground="YES" id="uW8-Wj-9iy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-9Z-gjX">
+                                <rect key="frame" x="95" y="91" width="74" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wikia name" id="NZ5-vX-f55">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u7T-Ez-9K5">
+                                <rect key="frame" x="273" y="49" width="152" height="34"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Image name" drawsBackground="YES" id="jCY-wq-pqg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fb6-V7-dMf">
+                                <rect key="frame" x="312" y="91" width="78" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Image name" id="ZD9-X3-czw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wdq-Tl-bdq">
+                                <rect key="frame" x="179" y="13" width="124" height="32"/>
+                                <buttonCell key="cell" type="push" title="Upload image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RC2-i7-ZQc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="uploadAction:" target="XfG-lQ-9wD" id="imY-yI-J7b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fb6-V7-dMf" secondAttribute="trailing" constant="92" id="J8D-W0-xit"/>
+                            <constraint firstItem="wdq-Tl-bdq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="185" id="Kty-jZ-VlA"/>
+                            <constraint firstItem="u7T-Ez-9K5" firstAttribute="leading" secondItem="K1l-MG-HDD" secondAttribute="trailing" constant="65" id="KuO-m7-dRr"/>
+                            <constraint firstItem="XSO-9Z-gjX" firstAttribute="baseline" secondItem="fb6-V7-dMf" secondAttribute="baseline" id="QOS-WK-Gh5"/>
+                            <constraint firstItem="wdq-Tl-bdq" firstAttribute="top" secondItem="K1l-MG-HDD" secondAttribute="bottom" constant="8" symbolic="YES" id="RfM-mh-LtQ"/>
+                            <constraint firstItem="XSO-9Z-gjX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="TxK-ns-aF4"/>
+                            <constraint firstItem="K1l-MG-HDD" firstAttribute="firstBaseline" secondItem="u7T-Ez-9K5" secondAttribute="firstBaseline" id="XdJ-SJ-bIX"/>
+                            <constraint firstItem="XSO-9Z-gjX" firstAttribute="centerX" secondItem="K1l-MG-HDD" secondAttribute="centerX" id="aj3-jE-mnU"/>
+                            <constraint firstItem="XSO-9Z-gjX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="97" id="d1p-1i-UDZ"/>
+                            <constraint firstAttribute="trailing" secondItem="u7T-Ez-9K5" secondAttribute="trailing" constant="55" id="dFJ-vg-tS9"/>
+                            <constraint firstItem="K1l-MG-HDD" firstAttribute="top" secondItem="XSO-9Z-gjX" secondAttribute="bottom" constant="8" symbolic="YES" id="gbS-qN-VLO"/>
+                            <constraint firstItem="K1l-MG-HDD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="56" id="ljW-n9-gxY"/>
+                            <constraint firstItem="K1l-MG-HDD" firstAttribute="baseline" secondItem="u7T-Ez-9K5" secondAttribute="baseline" id="rRW-MQ-CuC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageTextField" destination="u7T-Ez-9K5" id="cQw-1Y-Ir6"/>
+                        <outlet property="wikiaTextField" destination="K1l-MG-HDD" id="Jj5-Tv-m2g"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="584"/>
         </scene>
     </scenes>
 </document>

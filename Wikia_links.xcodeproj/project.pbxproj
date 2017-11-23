@@ -13,6 +13,9 @@
 		E1A2B0391F77B2C5006A4B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A2B0371F77B2C5006A4B3B /* Main.storyboard */; };
 		E1A2B0451F77B2C5006A4B3B /* Wikia_linksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B0441F77B2C5006A4B3B /* Wikia_linksTests.swift */; };
 		E1A2B0501F77B2C5006A4B3B /* Wikia_linksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B04F1F77B2C5006A4B3B /* Wikia_linksUITests.swift */; };
+		E1A2B05E1F77B7EF006A4B3B /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B05D1F77B7EF006A4B3B /* UploadViewController.swift */; };
+		E1A2B0601F77BF97006A4B3B /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B05F1F77BF97006A4B3B /* URL.swift */; };
+		E1A2B0621F77C1D5006A4B3B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B0611F77C1D5006A4B3B /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		E1A2B04B1F77B2C5006A4B3B /* Wikia_linksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wikia_linksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A2B04F1F77B2C5006A4B3B /* Wikia_linksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wikia_linksUITests.swift; sourceTree = "<group>"; };
 		E1A2B0511F77B2C5006A4B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1A2B05D1F77B7EF006A4B3B /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		E1A2B05F1F77BF97006A4B3B /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		E1A2B0611F77C1D5006A4B3B /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				E1A2B0311F77B2C5006A4B3B /* AppDelegate.swift */,
+				E1A2B05F1F77BF97006A4B3B /* URL.swift */,
+				E1A2B05D1F77B7EF006A4B3B /* UploadViewController.swift */,
+				E1A2B0611F77C1D5006A4B3B /* Defaults.swift */,
 				E1A2B0331F77B2C5006A4B3B /* ViewController.swift */,
 				E1A2B0351F77B2C5006A4B3B /* Assets.xcassets */,
 				E1A2B0371F77B2C5006A4B3B /* Main.storyboard */,
@@ -193,6 +202,11 @@
 					E1A2B02D1F77B2C4006A4B3B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					E1A2B03F1F77B2C5006A4B3B = {
 						CreatedOnToolsVersion = 9.0;
@@ -258,7 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A2B0341F77B2C5006A4B3B /* ViewController.swift in Sources */,
+				E1A2B05E1F77B7EF006A4B3B /* UploadViewController.swift in Sources */,
+				E1A2B0621F77C1D5006A4B3B /* Defaults.swift in Sources */,
 				E1A2B0321F77B2C5006A4B3B /* AppDelegate.swift in Sources */,
+				E1A2B0601F77BF97006A4B3B /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
